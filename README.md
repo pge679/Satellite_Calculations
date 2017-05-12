@@ -7,7 +7,9 @@ ITU-R software, data and validation examples are available at http://www.itu.int
 
 These modules are re-coded in python based on previous programs I wrote during PhD study into radiowave propagation in Matlab, IDL and C. 
 
-Purpose is for self-learning of Python (which so seems to be very similar to MATLAB and IDL in any case). All suggestions on improving the the Python coding greatfully received, along with any corrections to the code if needed.
+Purpose is for self-learning of Python (which so seems to be very similar to MATLAB and IDL in any case). As an exercise it has been ideal for the coding of complex equations, reading and processing of large data files, familiarisation with Anaconda development environment, configuration control using Github. 
+
+All suggestions on improving the the Python coding gratefully received, along with any corrections to the code if needed.
 
 All equations are openly published and I make no claims to be the author or have any ownership of the data used in their calculation. I have included references to equation source material. As these modules are coded directly from the source equations they are not based on the programs of other author as the objective was purely academic to application of Python. Where possible module outputs have been verited against web available examples.
 
