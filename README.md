@@ -13,7 +13,8 @@ All suggestions on improving the the Python coding gratefully received, along wi
 
 All equations are openly published and I make no claims to be the author or have any ownership of the data used in their calculation. I have included references to equation source material. As these modules are coded directly from the source equations they are not based on the programs of other sources as the objective was purely academic to application of Python. Where possible module outputs have been verited against web available examples.
 
-Functions included are 
+Functions within the sat_calc.py module :
+
 1. Satellite Elevation Angle (elv_deg)
 2. Slant path range from earth to space (path_km)
 
