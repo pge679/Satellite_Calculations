@@ -15,3 +15,4 @@ All equations are openly published and I make no claims to be the author or have
 
 Functions included are 
 1. Satellite Elevation Angle (elv_deg)
+2. Slant path range from earth to space (path_km)
