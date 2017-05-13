@@ -40,6 +40,23 @@ def path_km(satlong,eslat,eslong):
     slantrange = sqrt(p1 + (p2*p3))
         
     return slantrange
-        
+
+def azimuth(satlong,eslat,eslong):
+    #
+    # Calulate satellite azimuth
+    #
+    # esazimuth = azimuth [deg] E,S
+    # satlong = satellite longitude [deg] N+,S-
+    # eslat   = earth station latiude [deg] E+,W-
+    # eslong  = easrth station longitude [deg] E,W-
+ 
+    from math import pi,atan,tan,sin       
+
+    longdiffr = (eslong - satlong)/ (180/pi)
+    esazimuth = 180 + (180/pi)*atan(tan(longdiffr)/sin((eslat/(180/pi))))
+    if eslat < 0:
+        esazimuth = esazimuth - 180
+    if esazimuth < 0:
+        esazimuth = esazimuth + 360.0
         
 
