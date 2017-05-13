@@ -9,16 +9,14 @@ def elv_deg(satlong, eslat, eslong):
     # eslat   = earth station latiude [deg] E+,W-
     # eslong  = earth station longitude [deg] E,W-
 
-    import math
+    import math pi, cos, sqrt, atan
     
-    pi = math.pi
-
-    top = (math.cos((pi/180)*eslat)
-            *math.cos((pi/180)*(eslong-satlong))
+    top = (cos((pi/180)*eslat)
+            *cos((pi/180)*(eslong-satlong))
            -6378/(6378+35786)) 
-    bottom = (math.sqrt(1-(math.cos((pi/180)*eslat)**2)
-            *(math.cos((pi/180)*(eslong-satlong))**2)))
-    el = math.atan(top/bottom) /pi*180
+    bottom = (sqrt(1-(cos((pi/180)*eslat)**2)
+            *(cos((pi/180)*(eslong-satlong))**2)))
+    el = atan(top/bottom) /pi*180
 
     return el;
 
@@ -33,15 +31,13 @@ def path_km(satlong,eslat,eslong):
     # eslat   = earth station latiude [deg] E+,W-
     # eslong  = easrth station longitude [deg] E,W-
    
-    import math
+    import math pi, cos, sqrt
                                            
-    pi = math.pi
-    
     longdiffr = (eslong - satlong)/(180/pi)
     p1 = 35786*35786
     p2 = 2*6378.16*(35786 + 6378.16)
-    p3 = 1 - math.cos(eslat/(180/pi))*math.cos(-longdiffr)
-    slantrange = math.sqrt(p1 + (p2*p3))
+    p3 = 1 - cos(eslat/(180/pi))*cos(-longdiffr)
+    slantrange = sqrt(p1 + (p2*p3))
         
     return slantrange
         
