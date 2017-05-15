@@ -59,4 +59,16 @@ def azimuth(satlong,eslat,eslong):
     if esazimuth < 0:
         esazimuth = esazimuth + 360.0
         
+def fspl(freq,slantrange):
+    #
+    # Calulate Free Space Path Loss 
+    #
+    # fspl = fspl [dB]
+    # freq = carrier frequency GHz
+    # slantrange   = slant path distance from earth station to satellite [km]
 
+    from math import pi, log10
+    
+    fspl = -10*log10(0.09/freq/freq/(16*pi*pi*slantrange*1000*slantrange*1000))
+   
+    return fspl;
