@@ -1,5 +1,5 @@
-def itur_p838(f,El,RR,tilt):
-    # Specific Attenuation due to rain [ITU-R P838]
+def itur_p838_1(f,El,RR,tilt):
+    # Specific Attenuation due to rain [ITU-R P838-1]
     #
     # yr = itu838_Spec_Atten_Rain(f,El,RR,tilt)
     #
